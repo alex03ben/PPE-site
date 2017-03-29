@@ -1,0 +1,21 @@
+h1 { text-align: center }
+.centreID { 
+	display:block;
+    margin:0 auto;
+    padding:10px;
+    width: 300px}
+
+.centreJouer{
+	display:block;
+	margin: 0 auto;
+	width: 250px;
+	height: 50px;
+}
+.imageCentre{
+	margin : 250px ;
+}
+.centreMenu{
+	margin-top : 300px;
+}
+body { 
+background-image: url("fond.jpg");}
