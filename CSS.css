@@ -12,8 +12,8 @@ h1
 
 .couleurTexte
 {
+	font-family: Impact;
 	color: brown;
-	font-weight: bold;
 	text-decoration: underline;
 }
 
