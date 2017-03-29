@@ -3,15 +3,24 @@ h1
 	text-align: center 
 }
 
+.configPseudo
+{
+	color: red;
+	text-transform: capitalize;
+	font-family: Impact;
+}
+
 .couleurTexte
 {
 	color: brown;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 .centreID 
 { 
 	display:block;
-    margin:0 auto;
+    margin: auto;
     padding:10px;
     width: 300px
 }

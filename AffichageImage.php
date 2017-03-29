@@ -3,12 +3,10 @@
 <head>
 	<link rel="stylesheet" href="CSS.css" />
 	<title>Test</title>
-	<center><h2 class="couleurTexte">Choisissez une image : </h2></center>
+	<center><h1 class="couleurTexte">Choisissez une image : </h1></center>
 </head>
 <body>
-	<p>Pseudo : <?php echo $_POST['Identifiant']; ?></p>
-	<em>
-	</em>
+	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 	<center>
 		<img src="image/211.jpg" height="250" width="250"  >
