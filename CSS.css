@@ -1,21 +1,35 @@
-h1 { text-align: center }
-.centreID { 
+h1 
+{ 
+	text-align: center 
+}
+
+.centreID 
+{ 
 	display:block;
     margin:0 auto;
     padding:10px;
-    width: 300px}
+    width: 300px
+}
 
-.centreJouer{
+.centreJouer
+{
 	display:block;
 	margin: 0 auto;
 	width: 250px;
 	height: 50px;
 }
-.imageCentre{
+
+.imageCentre
+{
 	margin : 250px ;
 }
-.centreMenu{
+
+.centreMenu
+{
 	margin-top : 300px;
 }
-body { 
-background-image: url("fond.jpg");}
+
+body 
+{ 
+background-image: url("fond.jpg");
+}
