@@ -8,13 +8,12 @@
 <body>
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
-	<center>
-		<img src="image/211.jpg" height="250" width="250"  >
-		<img src="image/atomic.jpg" height="250" width="250" >
-		<img src="image/chaton.jpg" height="250" width="250" >
-		<img src="image/paysage.jpg" height="250" width="250" >
-	</center>
+		<center>
+			<img src="image/211.jpg" class="animImage">
+			<img src="image/atomic.jpg" class="animImage">
+			<img src="image/chaton.jpg" class="animImage">
+			<img src="image/paysage.jpg" class="animImage">
+		</center>
 	</p>
-	<a href="TEST.html"><input type='submit' value='Menu' class="centreMenu"/>
 </body>
 </html>
