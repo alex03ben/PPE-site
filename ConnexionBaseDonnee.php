@@ -9,10 +9,10 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-
+$req = $bdd->exec('SELECT * FROM utilisateurs');
 
 if($bdd->exec('SELECT * FROM utilisateurs')){
-	echo $bdd->exec('SELECT * FROM utilisateurs');
+	echo $req;
 }else{
 	echo "ça marche pas";
 }
