@@ -1,8 +1,15 @@
 
 <?php
-$connect = mysql_connect('localhost','root','') or die ("erreur de connexion");
-mysql_select_db('gestionsiteimage',$connect) or die ("erreur de connexion base");
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
 
 
-echo $connect->exec('SELECT * FROM image');
+
+echo $bdd->exec('SELECT * FROM image;');
 ?>
