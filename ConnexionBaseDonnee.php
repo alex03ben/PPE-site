@@ -12,7 +12,7 @@ catch(Exception $e)
 
 
 if($bdd->exec('SELECT * FROM utilisateurs')){
-	echo "ça marche";
+	echo $bdd->exec('SELECT * FROM utilisateurs');
 }else{
 	echo "ça marche pas";
 }
