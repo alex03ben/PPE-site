@@ -16,7 +16,7 @@ while ($affiche = $req->fetch())
 ?>
 	<p>
 		<?php echo $affiche['numeroId'];?>
-		<?php echo $affiche['nom'];?>
+		<?php echo $affiche['nomId'];?>
 	</p>
 <?php
 }
