@@ -2,7 +2,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', 'root');
 }
 catch(Exception $e)
 {
@@ -11,5 +11,5 @@ catch(Exception $e)
 
 
 
-echo $bdd->exec('SELECT * FROM image;');
+$bdd->exec('INSERT INTO utilisateur(numeroId, nomId) VALUES(\'3\', \'toto\');');
 ?>
