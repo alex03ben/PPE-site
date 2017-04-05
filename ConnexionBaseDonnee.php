@@ -11,5 +11,11 @@ catch(Exception $e)
 
 
 
-$bdd->exec('INSERT INTO utilisateur(numeroId, nomId) VALUES(\'3\', \'toto\');');
+if($bdd->exec('SELECT * FROM utilisateurs')){
+	echo "ça marche";
+}else{
+	echo "ça marche pas";
+}
+
+
 ?>
