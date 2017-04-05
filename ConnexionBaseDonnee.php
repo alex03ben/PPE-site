@@ -1,6 +1,6 @@
 
 <?php
-/*try
+try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', 'root');
 }
@@ -9,33 +9,18 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->exec('SELECT * FROM utilisateurs');
+$req = $bdd->query('SELECT * FROM utilisateurs');
 
-if($bdd->exec('SELECT * FROM utilisateurs')){
-	echo $req;
-}else{
-	echo "ça marche pas";
-}*/
+while ($affiche = $req->fetch())
+{
+?>
+	<p>
+		<?php echo $affiche['numeroId'];?>
+	</p>
+<?php
+}
 
-try {
-    $hostname = "servername";
-    $dbname = "dbname";
-    $username = "username";
-    $pw = "password";
-    $pdo = new PDO ("mssql:host=$hostname;dbname=$dbname","$username","$pw");
-  } catch (PDOException $e) {
-    echo "Failed to get DB handle: " . $e->getMessage() . "\n";
-    exit;
-  }
-      $query = $pdo->prepare("select name FROM tbl_name");
-      $query->execute();
-     
-      for($i=0; $row = $query->fetch(); $i++){
-        echo $i." - ".$row['name']."<br/>";
-      }
-
-      unset($pdo);
-      unset($query);
-
+$affiche->closeCursor();
 
 ?>
+
