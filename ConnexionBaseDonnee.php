@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -21,7 +21,7 @@ while ($affiche = $req->fetch())
 <?php
 }
 
-$affiche->closeCursor();
+//$affiche->closeCursor();
 
 ?>
 
