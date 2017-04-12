@@ -23,9 +23,9 @@ function cheminAlea($nbRand){
 	<p class="imageCentre">
 		<center>
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb1); ?> class="animImage"></a>
-			<a href="AffichageImage.php"><img src="image/img2.jpg" class="animImage"></a>
-			<a href="AffichageImage.php"><img src="image/img3.jpg" class="animImage"></a>
-			<a href="AffichageImage.php"><img src="image/img4.jpg" class="animImage"></a>
+			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb2); ?> class="animImage"></a>
+			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb3); ?> class="animImage"></a>
+			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb4); ?> class="animImage"></a>
 		</center>
 	</p>
 </body>
