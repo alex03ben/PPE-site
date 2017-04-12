@@ -21,7 +21,9 @@ function cheminAlea($nbRand){
 <body>
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
-		<center>
+	<p><?php cheminAlea($nb1); ?></p>
+	<p><?php cheminAlea($nb2); ?></p>
+		<center>			
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb1); ?> class="animImage"></a>
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb2); ?> class="animImage"></a>
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb3); ?> class="animImage"></a>
