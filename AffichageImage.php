@@ -3,6 +3,11 @@ $nb1 = rand(1,10);
 $nb2 = rand(1,10);
 $nb3 = rand(1,10);
 $nb4 = rand(1,10);
+
+function cheminAlea($nbRand){
+	return "image/img"+$nbRand+".jpg";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +22,7 @@ $nb4 = rand(1,10);
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><img src=<?php echo"image/img"+$nb1+".jpg"; ?> class="animImage"></a>
+			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb1); ?> class="animImage"></a>
 			<a href="AffichageImage.php"><img src="image/img2.jpg" class="animImage"></a>
 			<a href="AffichageImage.php"><img src="image/img3.jpg" class="animImage"></a>
 			<a href="AffichageImage.php"><img src="image/img4.jpg" class="animImage"></a>
