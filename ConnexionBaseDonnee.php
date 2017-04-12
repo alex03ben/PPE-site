@@ -1,4 +1,3 @@
-
 <?php
 try
 {
@@ -15,6 +14,7 @@ while ($affiche = $req->fetch())
 {
 ?>
 	<p>
+		<?php echo rand(1,50);?>
 		<?php echo $affiche['numeroId'];?>
 		<?php echo $affiche['nomId'];?>
 	</p>
