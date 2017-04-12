@@ -1,6 +1,4 @@
 <?php
-for($i = 0; $i < 16; $i++)
-{
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,5 +22,4 @@ for($i = 0; $i < 16; $i++)
 </body>
 </html>
 <?php
- }
 ?>
