@@ -10,7 +10,7 @@
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><img src="imageRand.php" class="animImage"></a>		
+			<a href="AffichageImage.php"><img src="" class="animImage"></a>		
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb2); ?> class="animImage"></a>
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb3); ?> class="animImage"></a>
 			<a href="AffichageImage.php"><img src=<?php cheminAlea($nb4); ?> class="animImage"></a>
