@@ -1,3 +1,13 @@
+<?php
+
+$nb1 = rand(1,6);
+$nb2 = rand(1,10);
+$nb3 = rand(1,10);
+$nb4 = rand(1,10);
+
+//echo "<img src=\"$images[$i]\">
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
