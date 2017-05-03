@@ -1,0 +1,59 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Image
+#------------------------------------------------------------
+
+CREATE TABLE Image(
+        id     Varchar (25) NOT NULL ,
+        chemin Varchar (100) ,
+        nbClic Int ,
+        rate   Float ,
+        idCat  Int ,
+        PRIMARY KEY (id )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Categorie
+#------------------------------------------------------------
+
+CREATE TABLE Categorie(
+        idCat  Int NOT NULL ,
+        libCat Varchar (70) ,
+        PRIMARY KEY (idCat )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Utilisateurs
+#------------------------------------------------------------
+
+CREATE TABLE Utilisateurs(
+        idUtilisateur     Int NOT NULL ,
+        nomUtilisateur    Varchar (25) ,
+        point_psychopathe Int ,
+        point_gentil      Int ,
+        point_different   Varchar (25) ,
+        point_keke        Int ,
+        idCat             Int ,
+        position          Int ,
+        PRIMARY KEY (idUtilisateur )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Classement
+#------------------------------------------------------------
+
+CREATE TABLE Classement(
+        position Int NOT NULL ,
+        PRIMARY KEY (position )
+)ENGINE=InnoDB;
+
+ALTER TABLE Image ADD CONSTRAINT FK_Image_idCat FOREIGN KEY (idCat) REFERENCES Categorie(idCat);
+ALTER TABLE Utilisateurs ADD CONSTRAINT FK_Utilisateurs_idCat FOREIGN KEY (idCat) REFERENCES Categorie(idCat);
+ALTER TABLE Utilisateurs ADD CONSTRAINT FK_Utilisateurs_position FOREIGN KEY (position) REFERENCES Classement(position);
