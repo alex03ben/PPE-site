@@ -9,6 +9,7 @@ catch(Exception $e)
 }
 
 $req = $bdd->query('SELECT * FROM image');
+$affiche = $req->fetch();
 
 
 ?>
