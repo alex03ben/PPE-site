@@ -13,14 +13,15 @@ $requete = "SELECT * FROM image WHERE id = '.$nb1.'";
 
 echo $requete;
 $req = $bdd->query($requete);
-$affiche = $req->fetch();
 
+while($affiche = $req->fetch())
+{
 ?>
 	<p>
 		<?php echo $affiche['chemin'];?>
 	</p>
 <?php
-
+}
 //$affiche->closeCursor();
 
 ?>
