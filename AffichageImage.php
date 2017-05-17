@@ -20,10 +20,11 @@ $nb4 = rand(1,10);
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/img"$nb2".jpg\" class=\"animImage\">"; ?></a>		
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/img9.jpg\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/img10.jpg\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/img4.jpg\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"image/img",$nb1,".jpg\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"image/img",$nb2,".jpg\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"image/img",$nb3,".jpg\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"image/img",$nb4,".jpg\" class=\"animImage\">"; ?></a>		
+			
 		</center>
 	</p>
 </body>
