@@ -1,6 +1,6 @@
 <?php
 
-$nb1 = rand(1,4);
+$nb1 = rand(1,5);
 $nb2 = rand(1,5);
 $nb3 = rand(1,4);
 $nb4 = rand(1,10);
@@ -14,16 +14,16 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query('SELECT * FROM image');
+$req = $bdd->query('SELECT * FROM image WHERE id=',$nb1);
 
-while ($affiche = $req->fetch())
-{
+$affiche = $req->fetch();
+
 ?>
 	<p>
 		<?php echo $affiche['chemin'];?>
 	</p>
 <?php
-}
+
 //$affiche->closeCursor();
 ?>
 
