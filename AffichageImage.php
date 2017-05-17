@@ -28,10 +28,10 @@ $affiche = $req->fetch()
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>				
+			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>				
 		</center>
 	</p>
 </body>
