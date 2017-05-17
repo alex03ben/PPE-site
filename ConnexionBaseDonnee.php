@@ -10,7 +10,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query('SELECT * FROM image WHERE id=',$nb1);
+$req = $bdd->query('SELECT * FROM image WHERE id="',$nb1,'"');
 $affiche = $req->fetch();
 
 ?>
