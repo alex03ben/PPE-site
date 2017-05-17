@@ -11,12 +11,13 @@ catch(Exception $e)
 }
 $requete = "SELECT * FROM image WHERE id=\""+$nb1+"\"";
 
-$req = $bdd->query($requete);
-$affiche = $req->fetch();
+echo $requete;
+//$req = $bdd->query($requete);
+//$affiche = $req->fetch();
 
 ?>
 	<p>
-		<?php echo $affiche['chemin'];?>
+		<?php //echo $affiche['chemin'];?>
 	</p>
 <?php
 
