@@ -9,10 +9,8 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$requete = "SELECT * FROM image WHERE id = '.$nb1.'";
 
-echo $requete;
-$req = $bdd->query($requete);
+$req = $bdd->query("SELECT * FROM image WHERE id = '.$nb1.'");
 
 while($affiche = $req->fetch())
 {
