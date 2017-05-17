@@ -1,9 +1,5 @@
 <?php
-
-$nb1 = rand(1,5);
-$nb2 = rand(1,5);
-$nb3 = rand(1,4);
-$nb4 = rand(1,10);
+$nb1 = rand(1,10);
 
 try
 {
@@ -14,18 +10,12 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query('SELECT * FROM image WHERE id=',$nb1);
+$req = $bdd->query("SELECT chemin FROM image WHERE id = '$nb1'");
 
-$affiche = $req->fetch();
+$affiche = $req->fetch()
 
 ?>
-	<p>
-		<?php echo $affiche['chemin'];?>
-	</p>
-<?php
 
-//$affiche->closeCursor();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -38,10 +28,10 @@ $affiche = $req->fetch();
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/gentil/img",$nb1,".jpg\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/keke/img",$nb2,".jpg\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/psychopathe/img",$nb3,".jpg\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/img",$nb4,".jpg\" class=\"animImage\">"; ?></a>				
+			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\""+$affiche['chemin']+"\" class=\"animImage\">"; ?></a>				
 		</center>
 	</p>
 </body>
