@@ -5,12 +5,31 @@ $nb2 = rand(1,5);
 $nb3 = rand(1,4);
 $nb4 = rand(1,10);
 
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=gestionsiteimage;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+
+$req = $bdd->query('SELECT * FROM image');
+
+while ($affiche = $req->fetch())
+{
+?>
+	<p>
+		<?php echo $affiche['chemin'];?>
+	</p>
+<?php
+}
+//$affiche->closeCursor();
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Refresh" content ="600">
 	<link rel="stylesheet" href="CSS.css" />
 	<title>Test</title>
 	<center><h1 class="couleurTexte">Choisissez une image : </h1></center>

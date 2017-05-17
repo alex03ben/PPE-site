@@ -10,14 +10,12 @@ catch(Exception $e)
 
 $req = $bdd->query('SELECT * FROM image');
 
-while ($affiche = $req->fetch())
-{
+
 ?>
 	<p>
 		<?php echo $affiche['chemin'];?>
 	</p>
 <?php
-}
 
 //$affiche->closeCursor();
 
