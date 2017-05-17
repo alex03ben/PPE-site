@@ -23,7 +23,7 @@ $nb4 = rand(1,10);
 			<a href="AffichageImage.php"><?php echo "<img src=\"image/img"+$nb1+".jpg\" class=\"animImage\">"; ?></a>		
 			<a href="AffichageImage.php"><?php echo "<img src=\"image/img"+$nb2+".jpg\" class=\"animImage\">"; ?></a>
 			<a href="AffichageImage.php"><?php echo "<img src=\"image/img"+$nb3+".jpg\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"image/img"+$nb+".jpg\" class=\"animImage\">"; ?></a>
+			<a href="AffichageImage.php"><?php echo "<img src=\"image/img"+$nb4+".jpg\" class=\"animImage\">"; ?></a>
 		</center>
 	</p>
 </body>
