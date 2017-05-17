@@ -8,15 +8,13 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query('SELECT * FROM utilisateurs');
+$req = $bdd->query('SELECT * FROM image');
 
 while ($affiche = $req->fetch())
 {
 ?>
 	<p>
-		<?php echo rand(1,50);?>
-		<?php echo $affiche['numeroId'];?>
-		<?php echo $affiche['nomId'];?>
+		<?php echo $affiche['chemin'];?>
 	</p>
 <?php
 }
