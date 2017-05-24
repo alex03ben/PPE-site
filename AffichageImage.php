@@ -10,7 +10,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query("SELECT chemin FROM image WHERE chemin like = \"%psychopathe%\" AND id = '$nb1' ");
+$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%psychopathe%\" AND id = '$nb1' ");
 
 $affiche = $req->fetch()
 
