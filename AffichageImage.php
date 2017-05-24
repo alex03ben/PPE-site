@@ -14,7 +14,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier%\" AND id = '$nb' ");
+$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier/img$nb.jpg\" ");
 
 $affiche = $req->fetch();
 
