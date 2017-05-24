@@ -14,10 +14,10 @@ catch(Exception $e)
 
 $req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier%\" AND id = '$nb1' ");
 
-$affiche = $req->fetch()
+$affiche = $req->fetch();
 
 
-return "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
+echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
 }
 
 ?>
