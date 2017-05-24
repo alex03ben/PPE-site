@@ -16,7 +16,8 @@ $req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier%\" AN
 
 $affiche = $req->fetch()
 
-echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
+
+return "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
 }
 
 ?>
