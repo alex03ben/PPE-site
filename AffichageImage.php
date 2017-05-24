@@ -34,8 +34,8 @@ echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php imgPsy("psychopathe"); ?></a>
 			<a href="AffichageImage.php"><?php imgPsy("gentil"); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("psychopathe"); ?></a>
 			<a href="AffichageImage.php"><?php imgPsy("keke"); ?></a>		
 		</center>
 	</p>
