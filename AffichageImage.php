@@ -1,7 +1,9 @@
 <?php
-
-function imgPsy($dossier){
 $nb1 = rand(1,5);
+$nb2 = rand(1,5);
+$nb3 = rand(1,5);
+
+function imgPsy($dossier, $nb){
 
 try
 {
@@ -12,7 +14,7 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier%\" AND id = '$nb1' ");
+$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier%\" AND id = '$nb' ");
 
 $affiche = $req->fetch();
 
@@ -34,9 +36,9 @@ echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php imgPsy("gentil"); ?></a>
-			<a href="AffichageImage.php"><?php imgPsy("psychopathe"); ?></a>
-			<a href="AffichageImage.php"><?php imgPsy("keke"); ?></a>		
+			<a href="AffichageImage.php"><?php imgPsy("gentil", $nb1); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("psychopathe", $nb2); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("keke", $nb3); ?></a>		
 		</center>
 	</p>
 </body>
