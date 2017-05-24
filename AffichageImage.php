@@ -1,9 +1,9 @@
 <?php
 $nb1 = rand(1,5);
-$nb2 = rand(1,5);
-$nb3 = rand(1,5);
 
-function imgPsy($dossier, $nb){
+function imgPsy($dossier){
+
+$nb = rand(1,5);
 
 try
 {
@@ -36,9 +36,9 @@ echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php imgPsy("gentil", $nb1); ?></a>
-			<a href="AffichageImage.php"><?php imgPsy("psychopathe", $nb2); ?></a>
-			<a href="AffichageImage.php"><?php imgPsy("keke", $nb3); ?></a>		
+			<a href="AffichageImage.php"><?php imgPsy("gentil"); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("psychopathe"); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("keke"); ?></a>		
 		</center>
 	</p>
 </body>
