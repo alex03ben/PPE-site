@@ -1,5 +1,7 @@
 <?php
-$nb1 = rand(1,10);
+
+function imgPsy($dossier){
+$nb1 = rand(1,5);
 
 try
 {
@@ -10,9 +12,12 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%psychopathe%\" AND id = '$nb1' ");
+$req = $bdd->query("SELECT chemin FROM image WHERE chemin like \"%$dossier%\" AND id = '$nb1' ");
 
 $affiche = $req->fetch()
+
+echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">";
+}
 
 ?>
 
@@ -28,10 +33,9 @@ $affiche = $req->fetch()
 	<p class="configPseudo">Pseudo : <?php echo $_POST['pseudo']; ?></p>
 	<p class="imageCentre">
 		<center>
-			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>
-			<a href="AffichageImage.php"><?php echo "<img src=\"",$affiche['chemin'],"\" class=\"animImage\">"; ?></a>				
+			<a href="AffichageImage.php"><?php imgPsy("psychopathe"); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("gentil"); ?></a>
+			<a href="AffichageImage.php"><?php imgPsy("keke"); ?></a>		
 		</center>
 	</p>
 </body>
